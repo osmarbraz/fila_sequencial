@@ -1,6 +1,6 @@
 
 /**
- * Implementação de Fila Sequencial Circular de forma estruturada.
+ * Implementação de Fila Sequencial de forma estruturada.
  *
  * Utiliza o critério FIFO
  *
@@ -170,7 +170,7 @@ public class Principal {
         int opcao = -1;
         //Menu para controle da fila
         while (opcao != 9) {	//Monta o menu de opcoes
-            opcao = Integer.parseInt(JOptionPane.showInputDialog("\t### Fila Sequencial Circular ###\n"
+            opcao = Integer.parseInt(JOptionPane.showInputDialog("\t### Fila Sequencial ###\n"
                     + "Selecione a opção desejada:\n"
                     + "1 - Enfileirar\n"
                     + "2 - Consultar Inicio\n"
