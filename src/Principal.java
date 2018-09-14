@@ -173,7 +173,8 @@ public class Principal {
         // Controla o menu da fila
         int opcao = -1;
         //Menu para controle da fila
-        while (opcao != 9) {	//Monta o menu de opcoes
+        while (opcao != 9) {	
+            //Monta o menu de opções
             opcao = Integer.parseInt(JOptionPane.showInputDialog("\t### Fila Sequencial ###\n"
                     + "Selecione a opção desejada:\n"
                     + "1 - Enfileirar\n"
@@ -198,10 +199,10 @@ public class Principal {
                 }
                 case 2: {
                     if (!estaVazia()) {
-                        int valor = acessarInicio(fila, fim);
-                        JOptionPane.showMessageDialog(null, "O valor do início é " + valor);
+                        int dado = acessarInicio(fila, fim);
+                        JOptionPane.showMessageDialog(null, "O valor do início é " + dado);
                     } else {
-                        JOptionPane.showMessageDialog(null, "Lista vazia!");
+                        JOptionPane.showMessageDialog(null, "Fila vazia!");
                     }
                     break;
                 }
@@ -240,11 +241,11 @@ public class Principal {
                     if (!estaVazia()) {
                         JOptionPane.showMessageDialog(null, "Listagem \n" + listar(fila, fim));
                     } else {
-                        JOptionPane.showMessageDialog(null, "Lista vazia!");
+                        JOptionPane.showMessageDialog(null, "Fila vazia!");
                     }
                     break;
                 }
             }//Fim Switch
         }//Fim While
-    }
+    }//Fim main
 }
