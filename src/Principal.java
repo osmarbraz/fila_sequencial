@@ -33,14 +33,14 @@ public class Principal {
      * Também chamado de Enqueue.
      *
      * @param fila Fila onde será inserido o novo elemento.
-     * @param novo Novo valor a ser inserido na fila.
+     * @param valor Um novo valor de um nó a ser inserido na fila.
      * @return verdadeiro ou falso se conseguiu enfileirar
      */
-    public static boolean enfileirar(int[] fila, int novo) {
+    public static boolean enfileirar(int[] fila, int valor) {
         //Verifica se a fila tem posições disponíveis para enfileirar        
         if (fim < TAMANHO_FILA) {
             //Insere o novo valor na posição k.
-            fila[fim] = novo;
+            fila[fim] = valor;
             //Incrementa a quantidade de elementos
             fim = fim + 1;
             return true;
@@ -74,14 +74,14 @@ public class Principal {
      *
      * @param fila Fila que contem os nós.
      * @param fim Quantidade de nós na fila.
-     * @param dado Novo valor para o primeiro nó.
+     * @param valor Novo valor para o primeiro nó.
      * @return verdadeiro ou falso se conseguiu alterar.
      */
-    public static boolean alterarInicio(int[] fila, int fim, int dado) {
+    public static boolean alterarInicio(int[] fila, int fim, int valor) {
         //Verifica se a fila não está vazia
         if (fim != 0) {
             //Atribui o novo valor para o início da fila
-            fila[0] = dado;
+            fila[0] = valor;
             return true;
         } else {
             System.out.println("Alterar início - Fila Vazia.");
@@ -154,7 +154,7 @@ public class Principal {
      *
      * @return A quantidade de elementos da fila.
      */
-    public static int getN() {
+    public static int getQuantidade() {
         return fim;
     }
 
@@ -234,7 +234,7 @@ public class Principal {
                     break;
                 }
                 case 7: {
-                    JOptionPane.showMessageDialog(null, "Quantidade de elementos na fila : " + getN());
+                    JOptionPane.showMessageDialog(null, "Quantidade de elementos na fila : " + getQuantidade());
                     break;
                 }
                 case 8: {
